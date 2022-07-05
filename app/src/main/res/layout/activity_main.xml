@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
@@ -28,13 +29,12 @@
 
     <Button
         android:id="@+id/logout"
-        style="@android:style/Widget.Button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded_button"
         android:backgroundTint="@color/colorAccent"
         android:fontFamily="@font/gotham2"
-        android:minHeight="48dp"
+        android:minHeight="30dp"
         android:text="Logout"
         android:textColor="@color/white"
         android:textSize="18sp" />
