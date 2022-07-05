@@ -30,7 +30,7 @@
 
 
     <EditText
-        android:id="@+id/emailEditText"
+        android:id="@+id/emailLogEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -44,6 +44,14 @@
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword" />
+    <TextView
+        android:id="@+id/forgottenPasswordTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="8dp"
+        android:gravity="right"
+        android:text="Password dimenticata?" />
 
     <Button
         android:id="@+id/register"
@@ -57,13 +65,7 @@
         android:textColor="@color/white"
         android:textSize="18sp" />
 
-    <TextView
-        android:id="@+id/forgottenPasswordTextView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:gravity="center"
-        android:text="Password dimenticata?" />
+
 
     <TextView
         android:id="@+id/signUpTextView"
