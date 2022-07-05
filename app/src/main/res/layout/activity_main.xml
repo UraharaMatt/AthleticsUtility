@@ -34,7 +34,7 @@
         android:background="@drawable/rounded_button"
         android:backgroundTint="@color/colorAccent"
         android:fontFamily="@font/gotham2"
-        android:minHeight="30dp"
+        android:minHeight="48dp"
         android:text="Logout"
         android:textColor="@color/white"
         android:textSize="18sp" />
