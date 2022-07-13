@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     android:background="@color/black"
     android:orientation="vertical"
     android:padding="16dp">
@@ -10,7 +11,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="32dp"
         android:gravity="center"
         android:text="Athletics"
         android:fontFamily="@font/gotham2"
@@ -20,7 +21,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="90dp"
         android:fontFamily="@font/gotham2"
         android:gravity="center"
         android:text="Utility"
@@ -54,7 +55,7 @@
         android:text="Password dimenticata?" />
 
     <Button
-        android:id="@+id/register"
+        android:id="@+id/loginButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/colorAccent"
