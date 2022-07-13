@@ -57,7 +57,6 @@
         android:id="@+id/register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/rounded_button"
         android:backgroundTint="@color/colorAccent"
         android:fontFamily="@font/gotham2"
         android:minHeight="48dp"
