@@ -34,6 +34,7 @@
         android:backgroundTint="@color/colorAccent"
         android:fontFamily="@font/gotham2"
         android:textSize="18sp"
+        android:onClick="logOut"
         android:text="Logout" />
 
 

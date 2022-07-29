@@ -23,15 +23,14 @@ class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
-    // Initialize Firebase Auth
+        // Initialize Firebase Auth
         auth = Firebase.auth
-
         // set on-click listener
         signupButton.setOnClickListener {
             onSignUpClick()
         }
-    }
 
+    }
     private fun onSignUpClick() {
         val email = emailEditText.text.toString().trim()
         val password = passwordEditText.text.toString().trim()
@@ -65,35 +64,30 @@ class RegisterActivity : AppCompatActivity() {
                     val currentlyUser = auth.currentUser
                     val uid = currentlyUser!!.uid
                     val newUser = User(userName, userSurname, email)
-                    val database = Firebase.database.reference
+                    val database = Firebase.database("https://athleticsutility-c70a4-default-rtdb.europe-west1.firebasedatabase.app/").reference
                     database.child("users").child(uid).setValue(newUser)
                         .addOnCompleteListener { task ->
                             if (task.isSuccessful) {
                                 val intent = Intent(this, MainActivity::class.java)
                                 startActivity(intent)
                                 finish()
-                            } else { }
+                            } else {
+                                // If sign in fails, display a message to the user.
+                                Log.w(TAG, "Registration:failure", task.exception)
+                                Toast.makeText(baseContext, "Creation failed.",
+                                    Toast.LENGTH_SHORT).show()
+                            }
                         }
                 }
                 else {
                         // If sign in fails, display a message to the user.
                         Log.w(TAG, "createUserWithEmail:failure", task.exception)
                         Toast.makeText(
-                            baseContext, "Authentication failed.",
+                            baseContext, "Creation failed.",
                             Toast.LENGTH_SHORT
                         ).show()
                     }
                 }
-    }
-    override fun onStart() {
-        super.onStart()
-        // Check if user is signed in (non-null)
-        val currentUser = auth.currentUser
-        if (currentUser == null) {
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-            finish()
-        }
     }
 
     fun loginRedirect(view: View) {

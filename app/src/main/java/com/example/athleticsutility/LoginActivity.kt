@@ -29,7 +29,9 @@ class LoginActivity : AppCompatActivity() {
         loginButton.setOnClickListener{
             onLoginClick()
         }
-
+        signUpTextView.setOnClickListener {
+            signUpRedirect()
+        }
         forgottenPasswordTextView.setOnClickListener{
             onRecoveryPasswordClick()
         }
@@ -73,7 +75,7 @@ class LoginActivity : AppCompatActivity() {
         startActivity(intent)
         finish()*/
     }
-    fun signUpRedirect(view: View) {
+    fun signUpRedirect() {
         val intent = Intent(this, RegisterActivity::class.java)
         startActivity(intent)
         finish()
