@@ -49,7 +49,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="e-Mail"
-        android:inputType="textEmailAddress"/>
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp" />
 
     <EditText
         android:id="@+id/passwordEditText"
@@ -57,7 +58,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:minHeight="48dp" />
 
     <Button
         android:id="@+id/signupButton"
@@ -70,14 +72,46 @@
         android:textColor="@color/white"
         android:textSize="18sp" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/signupGoogle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/gotham2"
+            android:minHeight="48dp"
+            android:text="Google"
+            android:drawableLeft="@drawable/ic_google"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/signupFB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/ic_facebook"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/gotham2"
+            android:minHeight="48dp"
+            android:text="Facebook"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
+    </LinearLayout>
+
     <TextView
         android:id="@+id/loginTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:gravity="center"
-        android:text="Possiedi già un account?"
+        android:minHeight="48dp"
         android:onClick="loginRedirect"
-        />
+        android:text="Possiedi già un account?" />
 
 </LinearLayout>
