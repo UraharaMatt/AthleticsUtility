@@ -9,8 +9,12 @@ import android.view.View
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import com.google.firebase.storage.ktx.storage
 
 private lateinit var auth: FirebaseAuth
+// Create a storage reference from our app
+private var storage = Firebase.storage
+
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         auth = Firebase.auth
 
     }
-
     override fun onStart() {
         super.onStart()
         // Check if user is signed in (non-null)
@@ -30,6 +33,9 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
             finish()
         }
+    }
+    fun uploadFile(){
+        var storageRef = storage.reference
     }
     override fun onStop() {
         super.onStop()

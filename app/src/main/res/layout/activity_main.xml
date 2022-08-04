@@ -28,6 +28,16 @@
         android:textStyle="bold" />
 
     <Button
+        android:id="@+id/UploadButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorAccent"
+        android:fontFamily="@font/gotham2"
+        android:textSize="18sp"
+        android:onClick="uploadFile"
+        android:text="Upload File" />
+
+    <Button
         android:id="@+id/LogoutButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

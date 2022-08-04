@@ -86,7 +86,7 @@
             android:fontFamily="@font/gotham2"
             android:minHeight="48dp"
             android:text="Google"
-            android:drawableLeft="@drawable/ic_google"
+            android:visibility="invisible"
             android:textColor="@color/colorAccent"
             android:textSize="18sp" />
 
@@ -95,7 +95,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:drawableLeft="@drawable/ic_facebook"
+            android:visibility="invisible"
             android:backgroundTint="@color/white"
             android:fontFamily="@font/gotham2"
             android:minHeight="48dp"

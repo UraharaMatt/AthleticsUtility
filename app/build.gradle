@@ -58,6 +58,13 @@ dependencies {
     // For example, declare the dependencies for Firebase Authentication and Cloud Firestore
     implementation 'com.google.firebase:firebase-auth'
     implementation 'com.google.firebase:firebase-firestore'
-
     implementation 'com.google.android.gms:play-services-auth:20.2.0'
+
+//Facebook SDK for login
+    implementation 'com.facebook.android:facebook-login:[4,5)'
+
+    // Declare the dependency for the Cloud Storage library
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+
+    implementation 'com.google.firebase:firebase-storage-ktx:20.0.1'
 }
