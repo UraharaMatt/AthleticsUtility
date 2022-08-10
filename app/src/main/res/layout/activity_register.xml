@@ -65,11 +65,11 @@
         android:id="@+id/signupButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/colorAccent"
         android:fontFamily="@font/gotham2"
         android:minHeight="48dp"
         android:text="Registrati"
         android:textColor="@color/white"
+        android:backgroundTint="@color/colorAccent"
         android:textSize="18sp" />
 
     <LinearLayout

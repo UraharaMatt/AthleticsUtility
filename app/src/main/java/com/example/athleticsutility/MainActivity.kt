@@ -13,7 +13,6 @@ import com.google.firebase.storage.ktx.storage
 
 private lateinit var auth: FirebaseAuth
 // Create a storage reference from our app
-private var storage = Firebase.storage
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,7 +34,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
     fun uploadFile(){
-        var storageRef = storage.reference
+        val intent = Intent(this, UploadFile::class.java)
+        startActivity(intent)
+        finish()
     }
     override fun onStop() {
         super.onStop()

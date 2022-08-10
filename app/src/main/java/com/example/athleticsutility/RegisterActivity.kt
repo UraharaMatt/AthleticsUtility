@@ -89,7 +89,6 @@ class RegisterActivity : AppCompatActivity() {
                     }
                 }
     }
-
     fun loginRedirect(view: View) {
         val intent = Intent(this, LoginActivity::class.java)
         startActivity(intent)
