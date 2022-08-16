@@ -6,14 +6,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
+import com.example.athleticsutility.databinding.ActivityRegisterBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
-import kotlinx.android.synthetic.main.activity_register.*
+
+private lateinit var binding: ActivityRegisterBinding
 
 class RegisterActivity : AppCompatActivity() {
 
@@ -23,34 +23,36 @@ class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
+        binding = ActivityRegisterBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         // Initialize Firebase Auth
         auth = Firebase.auth
         // set on-click listener
-        signupButton.setOnClickListener {
+        binding.signupButton.setOnClickListener {
             onSignUpClick()
         }
 
     }
     private fun onSignUpClick() {
-        val email = emailEditText.text.toString().trim()
-        val password = passwordEditText.text.toString().trim()
-        val userName = nameEditText.text.toString().trim()
-        val userSurname = surnameEditText.text.toString().trim()
+        val email = binding.emailEditText.text.toString().trim()
+        val password = binding.passwordEditText.text.toString().trim()
+        val userName = binding.nameEditText.text.toString().trim()
+        val userSurname = binding.surnameEditText.text.toString().trim()
 
         if (userName.isEmpty()) {
-            nameEditText.error = "Inserisci il Nome"
+            binding.nameEditText.error = "Inserisci il Nome"
             return
         }
         if (userSurname.isEmpty()) {
-            surnameEditText.error = "Inserisci il Cognome"
+            binding.surnameEditText.error = "Inserisci il Cognome"
             return
         }
         if (email.isEmpty()) {
-            emailEditText.error = "Inserisci l email"
+            binding.emailEditText.error = "Inserisci l email"
             return
         }
         if (password.isEmpty() || password.length < 6) {
-            passwordEditText.error = "Inserisci la password maggiore di 6 caratteri"
+            binding.passwordEditText.error = "Inserisci la password maggiore di 6 caratteri"
             return
         }
         createUser(userName, userSurname,email,password)

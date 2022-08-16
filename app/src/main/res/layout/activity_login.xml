@@ -16,7 +16,8 @@
         android:text="Athletics"
         android:fontFamily="@font/gotham2"
         android:textColor="#FFFFFF"
-        android:textSize="44sp" />
+        android:textSize="44sp"
+        />
 
     <TextView
         android:layout_width="match_parent"

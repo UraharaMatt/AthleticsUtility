@@ -21,7 +21,7 @@ tools:context="UploadFile">
         android:text="Choose" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/eTXTNomeFile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="4"
